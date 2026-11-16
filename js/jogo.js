@@ -195,7 +195,7 @@ function moverPersonagens() {
     p.x = p.x + p.vx;
     p.y = p.y + p.vy;
 
-    // bateu na parede? volta para o outro lado
+    // bateu na parede: volta para o outro lado
     if (p.x < 40) {
       p.x = 40;
       p.vx = -p.vx;

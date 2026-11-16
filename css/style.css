@@ -1,5 +1,5 @@
 /* ==========================================
-   GUARDIÕES DO JARDIM - style.css
+   LET IT BEE! - style.css
    Estilo usado pelas três páginas do site.
    ========================================== */
 
@@ -206,7 +206,7 @@ th {
 }
 
 
-/* ----- Página do jogo ----- */
+/* ----- Página do jogo ---- */
 .area-jogo {
   text-align: center;
 }
@@ -222,7 +222,7 @@ canvas {
 }
 
 
-/* ----- Página dos desenvolvedores ----- */
+/* ----- Página dos desenvolvedores ---- */
 .perfil {
   display: flex;
   gap: 25px;
@@ -246,7 +246,7 @@ canvas {
 }
 
 
-/* ----- Rodapé ----- */
+/* ---- Rodapé ----- */
 footer {
   background-color: #1e4a2e;
   color: white;
@@ -260,7 +260,7 @@ footer a {
 }
 
 
-/* ----- Celular ----- */
+/* ----- Celular ---- */
 @media (max-width: 600px) {
   .cabecalho {
     justify-content: center;
