@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Let It Bee! - Jogar</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- MENU -->
+  <header>
+    <div class="cabecalho">
+      <a class="logo" href="index.html">🐝 Let It Bee!</a>
+      <nav>
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="jogo.html" class="ativo">Jogar</a></li>
+          <li><a href="dev.html">Desenvolvedores</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- JOGO -->
+    <section class="area-jogo">
+      <h1>Jogar</h1>
+
+      <!-- Tudo do jogo é desenhado neste canvas pelo arquivo js/jogo.js -->
+      <canvas id="tela" width="800" height="500"></canvas>
+
+      <!-- Botão de início do jogo -->
+      <button id="botaoIniciar" class="botao">Iniciar jogo</button>
+    </section>
+
+    <!-- COMO JOGAR -->
+    <section>
+      <h2>Objetivo</h2>
+      <p>Eliminar o maior número possível de insetos invasores, proteger as abelhas e ficar no jogo pelo maior tempo possível. Você começa com <strong>3 vidas</strong>.</p>
+    </section>
+
+    <section>
+      <h2>Comandos</h2>
+      <table>
+        <tr>
+          <th>Comando</th>
+          <th>O que faz</th>
+        </tr>
+        <tr>
+          <td><span class="tecla azul">1</span></td>
+          <td>Seleciona o inseticida azul</td>
+        </tr>
+        <tr>
+          <td><span class="tecla vermelho">2</span></td>
+          <td>Seleciona o inseticida vermelho</td>
+        </tr>
+        <tr>
+          <td><span class="tecla amarelo">3</span></td>
+          <td>Seleciona o inseticida amarelo</td>
+        </tr>
+        <tr>
+          <td><span class="tecla">Clique do mouse</span></td>
+          <td>Dispara o inseticida selecionado no personagem</td>
+        </tr>
+        <tr>
+          <td><span class="tecla">Clique na lata</span></td>
+          <td>Os 3 inseticidas ficam na barra de baixo do jogo: clique em uma lata para escolher a cor</td>
+        </tr>
+      </table>
+      <p class="destaque">Elimine os insetos usando o inseticida da mesma cor. Nunca atinja as abelhas!</p>
+    </section>
+
+    <section>
+      <h2>Como diferenciar os personagens</h2>
+      <ul>
+        <li><strong>Abelha (proteja):</strong> corpo com listras pretas, asas brancas, olho e sorriso.</li>
+        <li><strong>Inseto invasor (elimine):</strong> casco com manchas pretas, cabeça preta, olhos vermelhos e patas.</li>
+        <li>Quando aparece um <strong style="color:#c62828">!</strong> em cima do inseto, ele está quase fugindo.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Pontuação e dificuldade</h2>
+      <ul>
+        <li>Inseto com a cor correta: <span class="ganha">+10 pontos</span></li>
+        <li>Inseto com a cor errada, abelha atingida ou inseto que escapa: <span class="perde">-1 vida</span></li>
+        <li>Clique no espaço vazio: sem penalidade</li>
+        <li>3 vidas = Fácil, 2 vidas = Médio, 1 vida = Difícil, 0 vidas = Fim de jogo</li>
+        <li>Com 50 pontos o jogo fica mais rápido (★) e com 100 pontos, mais rápido ainda (★★)</li>
+      </ul>
+    </section>
+
+    <p>Os personagens e o cenário foram desenhados com código, sem imagens de terceiros. Veja as <a href="dev.html#referencias">referências</a>.</p>
+
+  </main>
+
+  <footer>
+    <p>Let It Bee! - Projeto acadêmico | <a href="dev.html#referencias">Referências</a></p>
+  </footer>
+
+  <script src="js/jogo.js"></script>
+</body>
+</html>

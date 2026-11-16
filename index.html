@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Let It Bee! - Início</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- MENU (igual em todas as páginas) -->
+  <header>
+    <div class="cabecalho">
+      <a class="logo" href="index.html">🐝 Let It Bee!</a>
+      <nav>
+        <ul>
+          <li><a href="index.html" class="ativo">Início</a></li>
+          <li><a href="jogo.html">Jogar</a></li>
+          <li><a href="dev.html">Desenvolvedores</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="apresentacao">
+      <h1>Let It Bee! 🐝</h1>
+      <p class="slogan">Um jardim precisa de proteção. Mas cuidado com quem você escolhe atingir!</p>
+      <p><a class="botao" href="jogo.html">Jogar agora</a></p>
+    </section>
+
+    <section>
+      <h2>Apresentação do jogo</h2>
+      <p>Let It Bee! é um jogo de ação, atenção e reflexos desenvolvido com HTML, CSS, JavaScript e Canvas.</p>
+      <p>O jogador assume a responsabilidade de proteger um jardim contra insetos invasores que prejudicam as plantas. Para isso, precisa usar inseticidas de cores diferentes, eliminando os invasores sem atingir as abelhas, que são importantes para a polinização e a preservação do jardim.</p>
+      <p>O principal desafio é identificar rapidamente cada personagem, distinguir as abelhas dos insetos invasores e selecionar o inseticida correspondente à cor do invasor.</p>
+      <img src="img/tela-do-jogo.png" alt="Tela do jogo com abelhas e insetos invasores no jardim">
+    </section>
+
+    <section>
+      <h2>Objetivo</h2>
+      <p>Eliminar o maior número possível de insetos invasores, proteger as abelhas e manter-se no jogo pelo maior tempo possível.</p>
+      <p>O jogador começa com <strong>três vidas</strong>. Cada erro ou invasor que escapar resulta na perda de uma vida. Conforme as vidas diminuem, a dificuldade aumenta.</p>
+    </section>
+
+    <section>
+      <h2>Personagens</h2>
+      <p>O jogo tem seis personagens, divididos em duas categorias:</p>
+      <table>
+        <tr>
+          <th>Categoria</th>
+          <th>Personagens</th>
+          <th>Aparência</th>
+          <th>O que fazer</th>
+        </tr>
+        <tr>
+          <td>Abelhas</td>
+          <td>Abelha azul, abelha vermelha e abelha amarela</td>
+          <td>Corpo listrado, asas brancas e sorriso</td>
+          <td>Proteger (deixar passar)</td>
+        </tr>
+        <tr>
+          <td>Insetos invasores</td>
+          <td>Inseto azul, inseto vermelho e inseto amarelo</td>
+          <td>Casco com manchas, cabeça preta e patas</td>
+          <td>Eliminar</td>
+        </tr>
+      </table>
+      <p class="destaque">Regra importante: a cor determina o inseticida, e o tipo do personagem determina se ele deve ser eliminado ou protegido.</p>
+    </section>
+
+    <section>
+      <h2>Inseticidas e comandos</h2>
+      <p>O jogador usa o teclado para escolher o inseticida e o mouse para atingir o personagem.</p>
+      <table>
+        <tr>
+          <th>Tecla</th>
+          <th>Inseticida</th>
+          <th>Elimina</th>
+        </tr>
+        <tr>
+          <td><span class="tecla azul">1</span></td>
+          <td>Azul</td>
+          <td>Insetos azuis</td>
+        </tr>
+        <tr>
+          <td><span class="tecla vermelho">2</span></td>
+          <td>Vermelho</td>
+          <td>Insetos vermelhos</td>
+        </tr>
+        <tr>
+          <td><span class="tecla amarelo">3</span></td>
+          <td>Amarelo</td>
+          <td>Insetos amarelos</td>
+        </tr>
+      </table>
+      <p><strong>Mouse:</strong> clique sobre o personagem para disparar o inseticida selecionado.</p>
+      <p>Os três inseticidas ficam sempre visíveis na barra de baixo do jogo, e o selecionado fica destacado. Também dá para clicar em uma lata para escolher a cor.</p>
+      <p><strong>Exemplo:</strong> se aparecer um inseto azul, aperte <span class="tecla azul">1</span> e clique sobre ele. Se aparecer uma abelha azul, deixe-a passar.</p>
+    </section>
+
+    <section>
+      <h2>Movimentação dos personagens</h2>
+      <ul>
+        <li>Os personagens passeiam pelo jardim.</li>
+        <li>Eles aparecem e desaparecem em diferentes momentos.</li>
+        <li>Podem surgir em diferentes posições da tela.</li>
+        <li>Até quatro personagens podem estar na tela ao mesmo tempo.</li>
+        <li>A aparição é imprevisível: você nunca sabe quem vem em seguida.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Pontuação, vidas e penalidades</h2>
+      <table>
+        <tr>
+          <th>Ação</th>
+          <th>Resultado</th>
+        </tr>
+        <tr>
+          <td>Eliminar inseto com a cor correta</td>
+          <td class="ganha">+10 pontos (ele desaparece na hora)</td>
+        </tr>
+        <tr>
+          <td>Atingir inseto com a cor errada</td>
+          <td class="perde">-1 vida</td>
+        </tr>
+        <tr>
+          <td>Atingir uma abelha</td>
+          <td class="perde">-1 vida</td>
+        </tr>
+        <tr>
+          <td>Deixar um inseto escapar</td>
+          <td class="perde">-1 vida</td>
+        </tr>
+        <tr>
+          <td>Clicar em um espaço vazio</td>
+          <td>Sem penalidade</td>
+        </tr>
+      </table>
+    </section>
+
+    <section>
+      <h2>Progressão da dificuldade</h2>
+      <table>
+        <tr>
+          <th>Vidas</th>
+          <th>Nível</th>
+          <th>Como fica o jogo</th>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Fácil</td>
+          <td>Personagens mais lentos e aparições menos frequentes</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Médio</td>
+          <td>Personagens mais rápidos e aparições mais frequentes</td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>Difícil</td>
+          <td>Maior velocidade e aparições mais imprevisíveis</td>
+        </tr>
+        <tr>
+          <td>0</td>
+          <td>Fim de jogo</td>
+          <td>O jogo termina e mostra a pontuação final</td>
+        </tr>
+      </table>
+      <p>Os acertos também deixam o jogo mais difícil:</p>
+      <table>
+        <tr>
+          <th>Pontos</th>
+          <th>O que muda</th>
+        </tr>
+        <tr>
+          <td>50 pontos ★</td>
+          <td>Personagens 25% mais rápidos e aparecendo com mais frequência</td>
+        </tr>
+        <tr>
+          <td>100 pontos ★★</td>
+          <td>Personagens 50% mais rápidos e aparecendo com ainda mais frequência</td>
+        </tr>
+      </table>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>Let It Bee! - Projeto acadêmico | <a href="dev.html#referencias">Referências</a></p>
+  </footer>
+
+</body>
+</html>
